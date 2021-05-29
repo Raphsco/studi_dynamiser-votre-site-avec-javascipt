@@ -24,3 +24,25 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
         }
     }    
 });
+
+document.querySelector('.btn-hold').addEventListener('click', function() {
+    if (playingGames) {
+       
+        scores[JoueurActif] += scoresTours;
+
+        
+        document.querySelector('#score-' + JoueurActif).textContent = scores[JoueurActif];
+
+       
+        if (scores[JoueurActif] >= 100) {
+            document.querySelector('#name-' + JoueurActif).textContent = 'Winner!';
+            document.querySelector('.dice').style.display = 'none';
+            document.querySelector('.player-' + JoueurActif + '-panel').classList.add('winner');
+            document.querySelector('.player-' + JoueurActif + '-panel').classList.remove('active');
+            playingGames = false;
+        } else {
+            
+            nextPlayer();
+        }
+    }
+});
