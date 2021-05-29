@@ -1,0 +1,7 @@
+#Groupe-1
+User-Agent: *
+
+Disallow: 
+
+
+Sitemap: http://www.studi-dynamiserunsiteavecjavascript.secondelife.fr/index.html
