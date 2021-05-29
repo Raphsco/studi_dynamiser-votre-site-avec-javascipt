@@ -46,3 +46,18 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
         }
     }
 });
+function nextPlayer() {
+ 
+    JoueurActif === 0 ? JoueurActif = 1 : JoueurActif = 0;
+    scoresTours = 0;
+
+    document.getElementById('current-0').textContent = '0';
+    document.getElementById('current-1').textContent = '0';
+
+    document.querySelector('.player-0-panel').classList.toggle('active');
+    document.querySelector('.player-1-panel').classList.toggle('active');
+
+
+
+    document.querySelector('.dice').style.display = 'none';
+}
